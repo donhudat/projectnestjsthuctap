@@ -1,0 +1,15 @@
+version: '3.8'
+services:  # 'services' instead of 'service'
+  dev-database:
+    image: postgres:15.0
+    ports:  # 'ports' instead of 'port'
+      - 5434:5432
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: testdb
+    networks:  # 'networks' instead of 'network'
+      - nestjs-network
+networks:
+  nestjs-network:
+#nestjsapi-dev-database-1:name
